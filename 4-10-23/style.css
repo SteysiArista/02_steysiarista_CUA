@@ -1,0 +1,196 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 95%;
+  margin-inline: 1rem;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: transparent;
+  box-shadow:0px 3px 3px #00000040;;
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1118px) {
+  .nav__menu {
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    width: 100%;
+    height: calc(100vh - 3.5rem);
+    overflow: auto;
+    pointer-events: none;
+    opacity: 0;
+    transition: top .4s, opacity .3s;
+  }
+}
+
+.nav__link {
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color .3s;
+}
+
+.dropdown__link{
+  padding: 1rem 1.25rem 1rem 1rem;
+  color: white;
+  background-color:transparent;
+  box-shadow: 0px 4px 4px #00000040;
+  
+  display: flex;
+  align-items: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  column-gap: 1rem;
+  transition: background-color .3s;
+}
+.dropdown__link:hover, 
+.dropdown__sublink:hover {
+  background-color: #0c0f14;
+}
+
+/* For large devices */
+@media screen and (min-width: 1118px) {
+  .container {
+    margin-inline: auto;
+  }
+
+  .nav {
+    height:60px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__list {
+    height: 100%;
+    display: flex;
+    column-gap: 2rem;
+  }
+  .nav__link {
+    height: 50px;
+    padding: 0;
+    justify-content: initial;
+    column-gap: .25rem;
+  }
+  .nav__link:hover {
+    background-color: transparent;
+  }
+
+  .dropdown__item, 
+  .dropdown__subitem {
+    position: relative;
+  }
+
+    .dropdown__menu{
+    max-height: initial;
+    overflow: initial;
+    position: absolute;
+    left: -10px;
+    width: 210px;
+    top: 6rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s, top .3s;
+  }
+
+  .dropdown__link {
+    padding-inline: 1rem 1.5rem;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .dropdown__subitem .dropdown__link {
+    padding-inline: 1rem;
+  }
+
+  /* Show dropdown menu */
+  .dropdown__item:hover .dropdown__menu {
+    opacity: 1;
+    top: 3.7rem;
+    pointer-events: initial;
+    transition: top .3s;
+  }
+}
+.load{
+    animation: slide 2s;
+}
+.slider{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh;
+    animation: slide 30s infinite;
+}
+.content{
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.principal{
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    letter-spacing: 5px;
+    text-align: center;
+}
+.principal h1{
+    font-size: 70px;
+    margin-bottom: 20px;
+}
+@keyframes slide {
+    0%{
+        background-image: url("https://e0.pxfuel.com/wallpapers/493/877/desktop-wallpaper-bts-%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8-2020-bts-winter-package-preview-spot-bts-%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8-2020-bts-winter-package-preview-spot-bangtanboys-in-2020-bts-group-bts-boys-album-bts.jpg");
+    }
+    20%{
+        background-image: url("https://e0.pxfuel.com/wallpapers/493/877/desktop-wallpaper-bts-%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8-2020-bts-winter-package-preview-spot-bts-%EB%B0%A9%ED%83%84%EC%86%8C%EB%85%84%EB%8B%A8-2020-bts-winter-package-preview-spot-bangtanboys-in-2020-bts-group-bts-boys-album-bts.jpg");
+    }
+    20.01%{
+        background-image: url("https://media.vogue.co.uk/photos/609a8ca561e0597736812446/16:9/w_3264,h_1836,c_limit/GettyImages-1097661412.jpg");
+    }
+    40%{
+        background-image: url("https://media.vogue.co.uk/photos/609a8ca561e0597736812446/16:9/w_3264,h_1836,c_limit/GettyImages-1097661412.jpg");
+    }
+    40.01%{
+        background-image: url("https://imgmedia.larepublica.pe/640x371/larepublica/original/2021/12/19/61be97f0f0dd9c5007478e90.webp");
+    }
+    60%{
+        background-image: url("https://imgmedia.larepublica.pe/640x371/larepublica/original/2021/12/19/61be97f0f0dd9c5007478e90.webp");
+    }
+    60.01%{
+        background-image: url("https://www.infobae.com/new-resizer/VSibYe9iIi_UnuBAucUVVtrxsJ0=/arc-anglerfish-arc2-prod-infobae/public/725A4GGBQRC37PJIW33IWWZKXQ.png");
+    }
+    80%{
+        background-image: url("https://www.infobae.com/new-resizer/VSibYe9iIi_UnuBAucUVVtrxsJ0=/arc-anglerfish-arc2-prod-infobae/public/725A4GGBQRC37PJIW33IWWZKXQ.png");
+    }
+    80.01%{
+        background-image: url("https://www.hdwallpapers.in/download/jungkook_v_park_ji_min_suga_jin_rm_j_hope_bts_boy_band_hd_bts-1920x1080.jpg");
+    }
+    100%{
+        background-image: url("https://www.hdwallpapers.in/download/jungkook_v_park_ji_min_suga_jin_rm_j_hope_bts_boy_band_hd_bts-1920x1080.jpg");
+    }
+}
